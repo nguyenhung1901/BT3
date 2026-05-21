@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thêm khách hàng</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <div>
+        <h1>Thêm khách hàng</h1>
+        <p class="sub-text">Nhập thông tin khách hàng mới</p>
+      </div>
+      <a href="/index.html" class="btn btn-secondary">← Quay lại</a>
+    </div>
+
+    <div class="card">
+      <div id="messageBox"></div>
+
+      <form id="addCustomerForm" class="form-grid">
+        <div class="form-group">
+          <label>Mã khách hàng</label>
+          <input type="text" name="customerCode" required />
+        </div>
+
+        <div class="form-group">
+          <label>Họ tên</label>
+          <input type="text" name="fullName" required />
+        </div>
+
+        <div class="form-group">
+          <label>Số điện thoại</label>
+          <input type="text" name="phone" required />
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label>Giới tính</label>
+          <select name="gender">
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+            <option value="Khác">Khác</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Ngày sinh</label>
+          <input type="date" name="birthDate" />
+        </div>
+
+        <div class="form-group">
+          <label>Địa chỉ</label>
+          <input type="text" name="address" />
+        </div>
+
+        <div class="form-group">
+          <label>Loại khách hàng</label>
+          <select name="customerType">
+            <option value="Thường">Thường</option>
+            <option value="Thân thiết">Thân thiết</option>
+            <option value="VIP">VIP</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Loại da</label>
+          <select name="skinType">
+            <option value="Da dầu">Da dầu</option>
+            <option value="Da khô">Da khô</option>
+            <option value="Da hỗn hợp">Da hỗn hợp</option>
+            <option value="Da nhạy cảm">Da nhạy cảm</option>
+            <option value="Bình thường">Bình thường</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Ngày mua gần nhất</label>
+          <input type="date" name="lastPurchaseDate" />
+        </div>
+
+        <div class="form-group full-width">
+          <label>Ghi chú dị ứng</label>
+          <input type="text" name="allergyNote" />
+        </div>
+
+        <div class="form-group full-width">
+          <label>Sản phẩm quan tâm</label>
+          <input type="text" name="favoriteProduct" />
+        </div>
+
+        <div class="form-group full-width">
+          <label>Ghi chú</label>
+          <textarea name="note" rows="4"></textarea>
+        </div>
+
+        <div class="form-actions full-width">
+          <button type="submit" class="btn btn-primary">Lưu khách hàng</button>
+          <a href="/index.html" class="btn btn-secondary">Hủy</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/add.js"></script>
+</body>
+</html>

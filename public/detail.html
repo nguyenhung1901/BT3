@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi tiết khách hàng</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <div>
+        <h1>Chi tiết khách hàng</h1>
+        <p class="sub-text">Thông tin khách hàng và danh sách đơn hàng</p>
+      </div>
+      <a href="/index.html" class="btn btn-secondary">← Quay lại</a>
+    </div>
+
+    <div class="card">
+      <h2>Thông tin khách hàng</h2>
+      <div id="customerInfo" class="detail-grid"></div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>Tổng đơn hàng</h3>
+        <p id="statTotalOrders">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Đã thanh toán</h3>
+        <p id="statPaidOrders">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Tổng tiền</h3>
+        <p id="statTotalAmount">0 VNĐ</p>
+      </div>
+      <div class="stat-card">
+        <h3>Tổng nợ</h3>
+        <p id="statDebtAmount">0 VNĐ</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Thêm đơn hàng</h2>
+      <div id="messageBox"></div>
+
+      <form id="orderForm" class="form-grid">
+        <div class="form-group">
+          <label>Mã đơn hàng</label>
+          <input type="text" name="orderCode" required />
+        </div>
+
+        <div class="form-group">
+          <label>Ngày mua</label>
+          <input type="date" name="orderDate" required />
+        </div>
+
+        <div class="form-group full-width">
+          <label>Tên sản phẩm</label>
+          <input type="text" name="productName" required />
+        </div>
+
+        <div class="form-group">
+          <label>Số lượng</label>
+          <input type="number" name="quantity" min="1" required />
+        </div>
+
+        <div class="form-group">
+          <label>Đơn giá</label>
+          <input type="number" name="unitPrice" min="0" required />
+        </div>
+
+        <div class="form-group">
+          <label>Trạng thái</label>
+          <select name="status">
+            <option value="Đã thanh toán">Đã thanh toán</option>
+            <option value="Chưa thanh toán">Chưa thanh toán</option>
+          </select>
+        </div>
+
+        <div class="form-actions full-width">
+          <button type="submit" class="btn btn-primary">Thêm đơn hàng</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Danh sách đơn hàng</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Mã đơn</th>
+              <th>Ngày mua</th>
+              <th>Sản phẩm</th>
+              <th>Số lượng</th>
+              <th>Đơn giá</th>
+              <th>Thành tiền</th>
+              <th>Trạng thái</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody id="orderTableBody">
+            <tr>
+              <td colspan="8" class="text-center">Đang tải dữ liệu...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/detail.js"></script>
+</body>
+</html>
